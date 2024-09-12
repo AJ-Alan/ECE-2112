@@ -1,7 +1,7 @@
 # Programming Assignment 2: Numerical Python (Numpy)
 
 **Normalization Problem**\
-*Description:*
+*Description:*\
   create a random 5 x 5 ndArray, normalize the array, then save it\
 *Solution:*
   1. Makes use of the random array function: X = np.random.random.((5,5))
@@ -9,8 +9,8 @@
   3. using the np.save() function to save the array Z
   4. prints the saved array to confirm if its saved properly
   
-**Divisible by 3 Problem**
-*Description:*
+**Divisible by 3 Problem**\
+*Description:*\
   create a 10 x 10 array of squared values from 1 - 100 and create a new array with all values that are divisible by 3\
 *Solution:*
   1. First create a list with 1 as the value to initiliaze array A
