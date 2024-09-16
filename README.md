@@ -9,7 +9,7 @@
 2. Display the first five and last five rows of the resulting cars
 3. Save as a .py file named "Villarmil_Pandas-P1.py"
 
-*Solution:*\
+*Solution:*
   1. First import pandas library
   2. Next, initiliaze variable 'dfCars' as the 'cars.csv' dataframe using the pd.read_csv()
   3. Then display the first five and last five rows of dfCars using the .loc() function with the parameters of checking the dfCars.index if its less than 5 or more than the 6 less the max index `dfCars.index>(dfCars.index.stop-6)`, which precisely shows the first five and last five rows of the data frame
