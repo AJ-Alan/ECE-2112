@@ -4,9 +4,9 @@
 
 **Problem 1:**\
 *Description:*\
-  >insert description
-*Solution:*
-  1.>insert Solution
+-insert description
+*Solution:*\
+  1.insert Solution
 
 *Code:*\
  >insert code?
