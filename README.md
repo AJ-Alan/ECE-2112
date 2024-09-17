@@ -31,18 +31,24 @@
   
 **Problem 2:Searching Characteristics**\
 *Description:*\
-&emsp;With the same dataframe, use subsetting, slicing, and indexing operations to find the following:\
+&emsp;With the same dataframe, use subsetting, slicing, and indexing operations to find the following:
 1. Display the first five rows with odd-numbered columns of cars
 2. Display the row that contains the 'Model' of 'Mazda RX4'
 3. Find how many cylinders does the car model 'Camaro Z28' have
 4. Determine the number of cylinders and gear types of the car models 'Mazda RX4 Wag', 'Ford Pantera L', and 'Honda Civic'
-5. Then save as a .py file named "Villarmil_Pandas-P2.py"\
+5. Then save as a .py file named "Villarmil_Pandas-P2.py"
 
 *Solution:*
-  >insert solution
+1. To display the first five rows with odd-numbered columns:
+>Using the .loc() function with the conditions of checking if the indices of dfCars is less than 10 and if its modulus of 2 is equal to 1 (which refers to all odd numbers)
+2. To display the row that contains the 'Model' of Mazda RX4':
+>Using the .loc() function to check all rows of column 'Model' if they have the model 'Mazda RX4' and displays all the characteristics of that model
+3. To find how many cylinders does the car model 'Camaro Z28' have:
+>Using the .loc() function to first find the model 'Camaro Z28', then the only columns to display are 'Model' and 'cyl' to show the cylinder count and which model it belongs to (to be explicit)
+4. To determine the cylinders and gear types of the car models of 'Mazda RX4 Wag', 'Ford Pantera L', and 'Honda Civic':
+>Using the .loc() function to find the models 'Mazda RX4 Wag', 'Ford Pantera L', and 'Honda Civic' then the only columns to display are 'Model', 'cyl', and 'gear' to show the cylinders and gears of the respective models
+5. Using the print() function so they could all print in one .py file
 
-*Code:*\
-  >insert code?
 
 *Results:*\
   >insert Results?
@@ -53,4 +59,4 @@ Version History:\
 **V0.1:** - initial upload\
 **V0.2:** - in Villarmil_Pandas-P1.py, changes static comparison `(dfCars.index>26)` to `(dfCars.index>(dfCars.index.stop-6))` to have a more dynamic comparison that works even with other dataframes to always show the first five and last five rows of the dataframe.\
 **V0.3** - added the results as comments inside the files themselves
-**V0.4** - added note that the results will not have perfect indention
+**V0.4** - added note that the displayed results will not have perfect indention
