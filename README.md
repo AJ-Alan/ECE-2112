@@ -78,5 +78,5 @@ Version History:\
 **V0.1:** - initial upload\
 **V0.2:** - in Villarmil_Pandas-P1.py, changes static comparison `(dfCars.index>26)` to `(dfCars.index>(dfCars.index.stop-6))` to have a more dynamic comparison that works even with other dataframes to always show the first five and last five rows of the dataframe.\
 **V0.3** - added the results as comments inside the files themselves\
-**V0.4** - added note that the displayed results will not have a perfect indention - submission
-**V0.4.1** - reformatted the first table seen on the README.md file to make it more readable
+**V0.4** - added note that the displayed results will not have a perfect indention - submission\
+&nbsp;&nbsp;**V0.4.1** - reformatted the first table seen on the README.md file to make it more readable
