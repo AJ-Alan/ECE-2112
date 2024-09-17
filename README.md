@@ -1,7 +1,5 @@
 # Programming Assignment 3: Python Data Analysis (Pandas)
 
-** **
-
 **Problem 1: Five and Five Cars**\
 *Description:*\
 &emsp;Using new Pandas knowledge to solve pandas displaying problems with the given 'cars.csv':
@@ -29,7 +27,7 @@
 
 ** **
   
-**Problem 2:Searching Characteristics**\
+**Problem 2: Searching Characteristics**\
 *Description:*\
 &emsp;With the same dataframe, use subsetting, slicing, and indexing operations to find the following:
 1. Display the first five rows with odd-numbered columns of cars
@@ -51,7 +49,29 @@
 
 
 *Results:*\
-  >insert Results?
+# for 1.
+# 	    Model	        mpg	    cyl	    disp	hp	    drat	wt	    qsec	vs	am	gear	carb
+# 1	    Mazda RX4 Wag	21.0	6	    160.0	110	    3.90	2.875	17.02	0	1	4	    4
+# 3	    Hornet 4 Drive	21.4	6	    258.0	110	    3.08	3.215	19.44	1	0	3	    1
+# 5	    Valiant	        18.1	6	    225.0	105	    2.76	3.460	20.22	1	0	3	    1
+# 7	    Merc 240D	    24.4	4	    146.7	62	    3.69	3.190	20.00	1	0	4	    2
+# 9	    Merc 280	    19.2	6	    167.6	123	    3.92	3.440	18.30	1	0	4	    4
+
+# for 2.
+#   Model	    mpg	    cyl     disp	hp	    drat	wt	    qsec	vs	am	gear	carb
+# 0	Mazda RX4	21.0	6	    160.0	110 	3.9	    2.62	16.46	0	1	4	    4
+
+# for 3. (I have decided to show the model alongside to what is asked because it is not explicit as to which model is being shown since the questions are not displayed)
+# 	    Model	    cyl
+# 23	Camaro Z28	8
+
+# for 4.
+# 	    Model	        cyl     gear
+# 1	    Mazda RX4 Wag	6	    4
+# 18	Honda Civic	    4	    4
+# 28	Ford Pantera L	8	    5
+
+
 
 ** **
 
