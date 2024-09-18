@@ -29,15 +29,20 @@ Mindy = dfExam.loc[ #uses .loc function to find the conditions and equates the d
     ['Name','Track','Electronics','Average']] #then these are the columns to be located in the dataframe
 ```
 ![](https://github.com/AJ-Alan/ECE-2112/blob/PA4/Mindy.png?raw=true)
-<br><br><br><br>
+<br><br><br>
 ** **
 **Part 2: Data Visualization** <br>
 
-Using the functions:
-&emsp;sns.boxplot(x,y,hue,data) = function that creates a boxplot graph of the given data (as dataframe) with other inputs as x, y, and hue the data from columns of the given data frame<br>
-&emsp;plt.title(string) = function used to provide a title to the graph with string as the input<br>
-&emsp;plt.show() = function used to show the boxplot<br>
-
+To sort and display the data, the following functions were used: <br>
+&emsp;**sns.boxplot(x,y,hue,data)** = function that creates a boxplot graph of the given data (as dataframe) with other inputs as x, y, and hue the data from columns of the given data frame<br>
+&emsp;**plt.title(string)** = function used to provide a title to the graph with string as the input<br>
+&emsp;**plt.show()** = function used to show the boxplot<br>
+<br><br>
+To edit the visuals of the data, the following functions were used:<br>
+&emsp;**sns.set_style(preset)** = function that chooses from presets for the main colors <br>
+&emsp;**sns.set_palette(list)** = function that takes from a list of hex colors as the palette for the graph<br>
+<br>
+**Results**<br>
 Code: <br>
 ```Python
 #...
