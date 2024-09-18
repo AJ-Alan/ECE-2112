@@ -1,3 +1,3 @@
-# ECE-2112
+# ECE-2112 Advanced Programming 
 
-Hello po 
+Please check the branches for the respective Programming Assignments po.
