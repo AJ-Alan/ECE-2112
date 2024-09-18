@@ -9,17 +9,66 @@ b. Shows scores in Electronics, names, and tracks of those who scored higher or 
 
 &emsp;2. Data Visualization about how different features contribute to their average grade and asks the question of whether: track, gender, or hometown contributes to higher average score <br>
 
-*Solution:* <br>
-**Part 1: Data Frames** <br>
+** **
+
+# *Solution:* <br>
+**Part 1: Data Frames** <be>
+```Python
+Instru = dfExam.loc[ #uses .loc function to find the conditions and equates the dataframe to Instru
+    (dfExam['Electronics']>70)& #checks if the scores under Electronics is greater than 70
+    (dfExam['Hometown']=='Luzon')& #and checks if the test takers' hometown is  Luzon
+    (dfExam['Track'] == 'Instrumentation'), #then checks if their tracks are under Instrumentation
+    ['Name','GEAS','Electronics']] #then these are the columns to be located in the dataframe
+```
 ![](https://github.com/AJ-Alan/ECE-2112/blob/PA4/Instru.png?raw=true)
+```Python
+Mindy = dfExam.loc[ #uses .loc function to find the conditions and equates the dataframe to Mindy
+    (dfExam['Average']>=55)& #checks if the Average is 55 or higher
+    (dfExam['Hometown'] == 'Mindanao')& #and checks if the test takers' hometown is Mindanao
+    (dfExam['Gender'] == 'Female'), #then checks if the test takers' gender is female
+    ['Name','Track','Electronics','Average']] #then these are the columns to be located in the dataframe
+```
 ![](https://github.com/AJ-Alan/ECE-2112/blob/PA4/Mindy.png?raw=true)
+<br><br><br><br>
+** **
 **Part 2: Data Visualization** <br>
 
+Using the functions:
+&emsp;sns.boxplot(x,y,hue,data) = 
+&emsp;plt.title(string) = 
+&emsp;plt.show() = used to show the boxplot
 
+Code: <br>
+```Python
+#...
+sns.boxplot(x ='Track', y ='Average', hue ='Gender', data = dfExam)
+plt.title('Correlation between Track with Gender and Average Grades')
+plt.show()
+#...
+```
+Output: <br>
 ![](https://github.com/AJ-Alan/ECE-2112/blob/PA4/CorrelationTrackGender.png?raw=true)
 
+Code: <br>
+```Python
+#...
+sns.boxplot(x='Hometown', y='Average', hue='Track', data=dfExam)
+plt.title('Correlation between Hometown with Track and Average Grades')
+plt.show()
+#..
+```
+Output: <br>
 ![](https://github.com/AJ-Alan/ECE-2112/blob/PA4/CorrelationHometownTrack.png?raw=true)
 
+Code: <br>
+```Python
+#...
+sns.boxplot(x='Gender', y='Average', hue='Hometown', data=dfExam)
+plt.title('Correlation between Gender with Hometown and Average Grades')
+plt.show()
+#...
+```
+Output: <br>
 ![](https://github.com/AJ-Alan/ECE-2112/blob/PA4/CorrelationGenderHometown.png?raw=true)
 
 Using plt.savefig() function to get the pictures of these data: <br>
