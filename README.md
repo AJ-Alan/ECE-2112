@@ -12,7 +12,7 @@ b. Shows scores in Electronics, names, and tracks of those who scored higher or 
 ** **
 
 # *Solution:* <br>
-**Part 1: Data Frames** <be>
+**Part 1: Data Frames** <br>
 ```Python
 Instru = dfExam.loc[ #uses .loc function to find the conditions and equates the dataframe to Instru
     (dfExam['Electronics']>70)& #checks if the scores under Electronics is greater than 70
@@ -34,9 +34,9 @@ Mindy = dfExam.loc[ #uses .loc function to find the conditions and equates the d
 **Part 2: Data Visualization** <br>
 
 Using the functions:
-&emsp;sns.boxplot(x,y,hue,data) = 
-&emsp;plt.title(string) = 
-&emsp;plt.show() = used to show the boxplot
+&emsp;sns.boxplot(x,y,hue,data) = function that creates a boxplot graph of the given data (as dataframe) with other inputs as x, y, and hue the data from columns of the given data frame<br>
+&emsp;plt.title(string) = function used to provide a title to the graph with string as the input<br>
+&emsp;plt.show() = function used to show the boxplot<br>
 
 Code: <br>
 ```Python
@@ -71,11 +71,7 @@ plt.show()
 Output: <br>
 ![](https://github.com/AJ-Alan/ECE-2112/blob/PA4/CorrelationGenderHometown.png?raw=true)
 
-Using plt.savefig() function to get the pictures of these data: <br>
-```Python
-#...
-plt.savefig("CorrelationNAME1NAME2.png")
-```
 
 **Version History** <br>
-0.1 initial release
+0.1 initial release <br>
+0.1.1 minor edits to comments
