@@ -11,6 +11,29 @@ By Arc Joseph C. Villarmil, 2ECE-D <br>
 
 <br>
 
+## Before the Analysis 
+
+**Importing the necessary libraries** <br>
+```Python
+import numpy as np #imports numpy library for number and array manipulation
+import pandas as pd #imports pandas library for data analysis and wrangling
+import matplotlib.pyplot as plt #imports matplotlib for data plot creation
+import seaborn as sns #imports seaborn to create visually appealing data plots
+```
+
+**Viewing the Dataset** <br>
+The CSV file was loaded into a Python dataframe named 'dataSpotify' using this code: <br>
+```Python
+dataSpotify = pd.read_csv("spotify-2023.csv", encoding = 'latin-1')
+```
+Due to an encoding error that essentially needs this code ``encoding='latin-1')`` for it to load <br>
+<br>
+In dataSpotify, the .describe() function was used to find if it could be used for this problem,
+>insert image
+As seen here, only few data points are of interest
+
+<br>
+
 ## Statistics
 
 **Overview of Dataset** <br>
@@ -58,6 +81,9 @@ By Arc Joseph C. Villarmil, 2ECE-D <br>
 0.0: Initial Creation <br>
 0.0.1: Creation of README.md, Notebook, and uploading of CSV file for reference <br>
 0.0.2: Finalized outline for the README.md
+10/31/2024 <br>
+0.1: Began to document the initial analysis and created a Formal Notebook and a Test Notebook 
+0.1.1: Added code and images relating to the "Before the Analysis" section in the README file
 
 <br>
 
