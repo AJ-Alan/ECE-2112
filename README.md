@@ -27,10 +27,12 @@ The CSV file was loaded into a Python dataframe named 'dataSpotify' using this c
 dataSpotify = pd.read_csv("spotify-2023.csv", encoding = 'latin-1')
 ```
 Due to an encoding error that essentially needs this code ``encoding='latin-1')`` for it to load <br>
+The data can be viewed but due to its large size, some data is cut off in Python and the full data is too large to be viewed here on the documentation, hence it needs to be summarized and simplified to understand the data better <br>
 <br>
-In dataSpotify, the .describe() function was used to find if it could be used for this problem,
->insert image
-As seen here, only few data points are of interest
+In dataSpotify, the .describe() function was used to find if it could be used for this problem, <br>
+![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/descData.png)
+<br>
+As seen here, there are a few data points that are of interest, those being: (change to list) the count, measures of position for years, number of columns, statistics of the streams column... (check more wait Im gonna save for now)
 
 <br>
 
