@@ -1,13 +1,20 @@
 # An Explorative Data Analysis on Spotify's Dataset from 2023 
 By Arc Joseph C. Villarmil, 2ECE-D <br>
 
-**Description** <br>
->Describe what this is for
->analyze, visualize, and interpret the data to extract meaningful insights (replace)
+<br>
 
-**Regarding the Dataset and its contents** <br>
->Describe that this is for Spotify Dataset
->remember that the link is in the sources
+** **
+
+<br>
+
+*Description* <br>
+<br>
+This is a Data Analysis on Spotify's most streamed songs during 2023. The aim of this analysis is to understand the dataset that's available online using Python, not only for its powerful use in analysis but to deepen one's knowledge in how to use the Python Programming Language. The following sections will analyze, visualize, and interpret Spotify's data to extract meaningful insights that can be used for recommendations to understand what makes a track popular. <br> 
+<br>
+
+*Regarding the Dataset and its contents* <br>
+<br>
+The Spotify Dataset contains a plethora of data such as the track name, artist(s) name, release date, Spotify playlists and charts, streaming statistics, Apple Music presence, Deezer presence, Shazam charts, and various audio features. All of these data comes from the most famous songs of 2023 that were listed on Spotify. This came from Nidula Elgiriyewithana on kaggle who posted it a year ago on Kaggle. The link to the source is in the **Sources** section at the bottom of this file.
 
 <br>
 
@@ -32,11 +39,27 @@ The data can be viewed but due to its large size, some data is cut off in Python
 In dataSpotify, the .describe() function was used to find if it could be used for this problem, <br>
 ![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/descData.png)
 <br>
-As seen here, there are a few data points that are of interest, those being: (change to list) the count, measures of position for years, number of columns, statistics of the streams column... (check more wait Im gonna save for now)
+As seen here, there are a few data points that are of interest, those being: 
+* count of songs
+* measures of position for years
+* number of columns
+* the statistics of the streams column
+<br>
+
+Further analysis will require detailed documentation and coding. <br>
+As such, the following sections will be for this purpose. <br>
+* **Summary of Statistics** will summarize various statistics relevant to the data frame.
+* **Data Analysis** will analyze the results of the statistics and provide relevant recommendations.
+* **Version History** will provide a version history for this Data Analysis
+* **Sources** will provide the sources that were used for this Data Analysis
 
 <br>
 
-## Statistics
+** **
+
+<br>
+
+## Summary of Statistics
 
 **Overview of Dataset** <br>
 >How many rows and columns does the dataset contain?
@@ -78,7 +101,7 @@ As seen here, there are a few data points that are of interest, those being: (ch
 
 <br>
 
-**Version History** <br>
+## Version History
 10/30/2024 <br>
 0.0: Initial Creation <br>
 0.0.1: Creation of README.md, Notebook, and uploading of CSV file for reference <br>
@@ -86,12 +109,12 @@ As seen here, there are a few data points that are of interest, those being: (ch
 10/31/2024 <br>
 0.1: Began to document the initial analysis and created a Formal Notebook and a Test Notebook <br>
 0.1.1: Added code and images relating to the "Before the Analysis" section in the README file <br>
-11/1 ~ 11/2 were spent visiting family <br>
+11/1 ~ 11/2 were spent visiting deceased loved ones <br>
 11/3/2024 <br>
-idk yet
+0.1.2: Continued the documentation, started the summary of statistics, made some edits, and added more to the Formal Notebook
 
 <br>
 
-**Sources:** <br>
+## Sources:
 Elgiriyewithana, N. (2023). *Most Streamed Spotify Songs 2023* [Data set]. Kaggle. [https://doi.org/10.34740/kaggle/dsv/6367938](https://doi.org/10.34740/kaggle/dsv/6367938) <br>
 
