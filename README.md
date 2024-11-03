@@ -1,6 +1,9 @@
 # An Explorative Data Analysis on Spotify's Dataset from 2023 
 By Arc Joseph C. Villarmil, 2ECE-D <br>
 
+**Table of Contents**: <br>
+[Before the Analysis](#Before-the-Analysis)
+
 ** **
 
 *Description*: <br>
