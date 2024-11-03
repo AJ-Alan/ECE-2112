@@ -82,10 +82,13 @@ As seen here, there are a few data points that are of interest, those being: (ch
 10/30/2024 <br>
 0.0: Initial Creation <br>
 0.0.1: Creation of README.md, Notebook, and uploading of CSV file for reference <br>
-0.0.2: Finalized outline for the README.md
+0.0.2: Finalized outline for the README.md <br>
 10/31/2024 <br>
-0.1: Began to document the initial analysis and created a Formal Notebook and a Test Notebook 
-0.1.1: Added code and images relating to the "Before the Analysis" section in the README file
+0.1: Began to document the initial analysis and created a Formal Notebook and a Test Notebook <br>
+0.1.1: Added code and images relating to the "Before the Analysis" section in the README file <br>
+11/1 ~ 11/2 were spent visiting family <br>
+11/3/2024 <br>
+idk yet
 
 <br>
 
