@@ -2,7 +2,11 @@
 By Arc Joseph C. Villarmil, 2ECE-D <br>
 
 **Table of Contents**: <br>
-[Before the Analysis](#Before-the-Analysis)
+1. [Before the Analysis](#Before-the-Analysis) <br>
+2. [Summary of Statistics](#Summary-of-Statistics) <br>
+3. [Data Analysis](#Data-Analysis) <br>
+4. [Version History](#Version-History) <br>
+5. [Sources](#Sources) <br>
 
 ** **
 
