@@ -52,10 +52,10 @@ As seen here, there are a few data points that are of interest, those being:
 
 Further analysis will require detailed documentation and coding. <br>
 As such, the following sections will be for this purpose. <br>
-* **Summary of Statistics** will summarize various statistics relevant to the data frame.
-* **Data Analysis** will analyze the results of the statistics and provide relevant recommendations.
-* **Version History** will provide a version history for this Data Analysis
-* **Sources** will provide the sources that were used for this Data Analysis
+* **[Summary of Statistics](#Summary-of-Statistics)** will summarize various statistics relevant to the data frame.
+* **[Data Analysis](#Data-Analysis)** will analyze the results of the statistics and provide relevant recommendations.
+* **[Version History](#Version-History)** will provide a version history for this Data Analysis
+* **[Sources](#Sources)** will provide the sources that were used for this Data Analysis
 
 <br>
 
@@ -141,6 +141,14 @@ Where their respective data types are: <br>
 * liveness_% :  int64
 * speechiness_% :  int64
 
+<br>
+
+However, these do not show how many missing values there are. Using the ```.isnull()``` function to find the null/missing values in the dataframe conjoined with the ```.sum()``` function to sum all the 
+
+```Python
+#To show how many missing values are in each column
+print(dataSpotify.isnull().sum()) #uses .isnull() function to see which parts are null/missing values and uses the .sum() function to count the number of null values
+```
 
 >What are the data types of each column? Are there any missing values?
 
