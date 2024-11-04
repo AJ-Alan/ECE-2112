@@ -156,7 +156,7 @@ The number of streams is very important to understanding how popular a song is, 
 
 ## Sources:
 Elgiriyewithana, N. (2023). *Most Streamed Spotify Songs 2023* [Data set]. Kaggle. [https://doi.org/10.34740/kaggle/dsv/6367938](https://doi.org/10.34740/kaggle/dsv/6367938) <br>
-Special thanks to the following sources: [StackOverflow](https://stackoverflow.com), [GeeksforGeeks](https://www.geeksforgeeks.org), Laurent Pointal for the [Python Cheat Sheet](https://perso.limsi.fr/pointal/python:memento) <br>
+Special thanks to the following sources: [StackOverflow](https://stackoverflow.com), [GeeksforGeeks](https://www.geeksforgeeks.org), [W3Schools](https://www.w3schools.com), Laurent Pointal for the [Python Cheat Sheet](https://perso.limsi.fr/pointal/python:memento) <br>
 
 <br>
 
