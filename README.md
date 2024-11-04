@@ -37,8 +37,8 @@ The CSV file was loaded into a Python dataframe named 'dataSpotify' using this c
 ```Python
 dataSpotify = pd.read_csv("spotify-2023.csv", encoding = 'latin-1')
 ```
-Due to an encoding error that essentially needs this code ``encoding='latin-1')`` for it to load <br>
-The data can be viewed but due to its large size, some data is cut off in Python and the full data is too large to be viewed here on the documentation, hence it needs to be summarized and simplified to understand the data better <br>
+Due to an encoding error that essentially needs this code ``encoding='latin-1')`` for it to load. <br>
+The data can be viewed but due to its large size, some data is cut off in Python and the full data is too large to be viewed here on the documentation, hence it needs to be summarized and simplified to understand the data better. <br>
 <br>
 In dataSpotify, the ```.describe()``` function was used to find if it could be used for this problem, <br>
 ![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/descData.png)
@@ -46,8 +46,7 @@ In dataSpotify, the ```.describe()``` function was used to find if it could be u
 As seen here, there are a few data points that are of interest, those being: 
 * count of songs
 * measures of position for years
-* number of columns
-* the statistics of the streams column
+Somehow, the statistics for the number of streams could not be seen, but the reason for this will be seen later.
 <br>
 
 Further analysis will require detailed documentation and coding. <br>
@@ -59,15 +58,9 @@ As such, the following sections will be for this purpose. <br>
 
 <br>
 
-** **
-
-<br>
-
 ## Summary of Statistics
 
 **Overview of Dataset** <br>
-
-<br>
 
 Using the ```.shape``` attribute to dataSpotify,
 ```Python
@@ -83,32 +76,7 @@ These values can be inferred from the ```.describe()``` function, although its n
 <br>
 The 953 rows refers to how many songs are in the dataset, and the 24 columns refer to the "Key Features" of each song. These Key Features include: <br>
 
-* track_name: Name of the song
-* artist(s)_name: Name of the artist(s) of the song
-* artist_count: Number of artists contributing to the song
-* released_year: Year when the song was released
-* released_month: Month when the song was released
-* released_day: Day of the month when the song was released
-* in_spotify_playlists: Number of Spotify playlists the song is included in
-* in_spotify_charts: Presence and rank of the song on Spotify charts
-* streams: Total number of streams on Spotify
-* in_apple_playlists: Number of Apple Music playlists the song is included in
-* in_apple_charts: Presence and rank of the song on Apple Music charts
-* in_deezer_playlists: Number of Deezer playlists the song is included in
-* in_deezer_charts: Presence and rank of the song on Deezer charts
-* in_shazam_charts: Presence and rank of the song on Shazam charts
-* bpm: Beats per minute, a measure of song tempo
-* key: Key of the song
-* mode: Mode of the song (major or minor)
-* danceability_%: Percentage indicating how suitable the song is for dancing
-* valence_%: Positivity of the song's musical content
-* energy_%: Perceived energy level of the song
-* acousticness_%: Amount of acoustic sound in the song
-* instrumentalness_%: Amount of instrumental content in the song
-* liveness_%: Presence of live performance elements
-* speechiness_%: Amount of spoken words in the song
-<br>
-
+![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/ColumnDescription.png)
 These descriptions of the Key Features come from the Kaggle source (Elgiriyewithana, 2023). And the data types for each column can be seen using the ```.dtypes``` attribute from Pandas: 
 ```Python
 #To show the data types of each column
@@ -116,43 +84,25 @@ for x in dataSpotify.columns: #Uses a for loop with the range of the list of col
     print(x, ': ', dataSpotify[x].dtypes) #Prints each columns' datatype for every index in dataSpotify.columns
 ```
 Where their respective data types are: <br>
-* track_name :  object
-* artist(s)_name :  object
-* artist_count :  int64
-* released_year :  int64
-* released_month :  int64
-* released_day :  int64
-* in_spotify_playlists :  int64
-* in_spotify_charts :  int64
-* streams :  object
-* in_apple_playlists :  int64
-* in_apple_charts :  int64
-* in_deezer_playlists :  object
-* in_deezer_charts :  int64
-* in_shazam_charts :  object
-* bpm :  int64
-* key :  object
-* mode :  object
-* danceability_% :  int64
-* valence_% :  int64
-* energy_% :  int64
-* acousticness_% :  int64
-* instrumentalness_% :  int64
-* liveness_% :  int64
-* speechiness_% :  int64
-
+![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/ColumnDatatypes.png)
+This shows why the number of streams could not be seen using the ```.describe()``` function, since the function is only able to describe integers or floats, and the number of streams' datatype is an object.
 <br>
 
-However, these do not show how many missing values there are. Using the ```.isnull()``` function to find the null/missing values in the dataframe conjoined with the ```.sum()``` function to sum all the 
-
+However, these do not show how many missing values there are. Using the ```.isnull()``` function to find the null/missing values in the dataframe conjoined with the ```.sum()``` function to count all the missing values found with the previous function, as seen here:
 ```Python
 #To show how many missing values are in each column
 print(dataSpotify.isnull().sum()) #uses .isnull() function to see which parts are null/missing values and uses the .sum() function to count the number of null values
 ```
+Most of the columns have data in them, and only these two columns have a number of missing values found:
+* in_shazam_charts        50
+* key                     95
 
->What are the data types of each column? Are there any missing values?
+<br>
 
 **Basic Descriptive Statistics** <br>
+The number of streams is very important to understanding how popular a song is, as such, to get a general idea of how the streams work, some basic summary statistics such as the mean, median, and standard deviation.
+
+
 >What are the mean, median, and standard deviation of the streams column?
 >What is the distribution of released_year and artist_count? Are there any noticeable trends or outliers?
 
@@ -206,4 +156,8 @@ print(dataSpotify.isnull().sum()) #uses .isnull() function to see which parts ar
 
 ## Sources:
 Elgiriyewithana, N. (2023). *Most Streamed Spotify Songs 2023* [Data set]. Kaggle. [https://doi.org/10.34740/kaggle/dsv/6367938](https://doi.org/10.34740/kaggle/dsv/6367938) <br>
-Special thanks to the following sources: [StackOverflow](https://stackoverflow.com), [GeeksforGeeks](https://www.geeksforgeeks.org), Laurent Pointal for the [Python Cheat Sheet](https://perso.limsi.fr/pointal/python:memento)
+Special thanks to the following sources: [StackOverflow](https://stackoverflow.com), [GeeksforGeeks](https://www.geeksforgeeks.org), Laurent Pointal for the [Python Cheat Sheet](https://perso.limsi.fr/pointal/python:memento) <br>
+
+<br>
+
+[Back to Top](#An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023)
