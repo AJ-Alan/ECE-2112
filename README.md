@@ -71,7 +71,8 @@ As such, the following sections will be for this purpose. <br>
 
 Using the ```.shape``` attribute to dataSpotify,
 ```Python
-dataSpotify.shape #results to a tuple of (rows, columns)
+#To show the number of Rows and Columns
+print(dataSpotify.shape) #prints the results as a tuple of (rows, columns)
 #the result should be (953,24)
 ```
 This results to:
@@ -106,10 +107,40 @@ The 953 rows refers to how many songs are in the dataset, and the 24 columns ref
 * instrumentalness_%: Amount of instrumental content in the song
 * liveness_%: Presence of live performance elements
 * speechiness_%: Amount of spoken words in the song
-
 <br>
 
-These descriptions of the Key Features come from the Kaggle source (Elgiriyewithana, 2023).
+These descriptions of the Key Features come from the Kaggle source (Elgiriyewithana, 2023). And the data types for each column can be seen using the ```.dtypes``` attribute from Pandas: 
+```Python
+#To show the data types of each column
+for x in dataSpotify.columns: #Uses a for loop with the range of the list of columns
+    print(x, ': ', dataSpotify[x].dtypes) #Prints each columns' datatype for every index in dataSpotify.columns
+```
+Where their respective data types are: <br>
+* track_name :  object
+* artist(s)_name :  object
+* artist_count :  int64
+* released_year :  int64
+* released_month :  int64
+* released_day :  int64
+* in_spotify_playlists :  int64
+* in_spotify_charts :  int64
+* streams :  object
+* in_apple_playlists :  int64
+* in_apple_charts :  int64
+* in_deezer_playlists :  object
+* in_deezer_charts :  int64
+* in_shazam_charts :  object
+* bpm :  int64
+* key :  object
+* mode :  object
+* danceability_% :  int64
+* valence_% :  int64
+* energy_% :  int64
+* acousticness_% :  int64
+* instrumentalness_% :  int64
+* liveness_% :  int64
+* speechiness_% :  int64
+
 
 >What are the data types of each column? Are there any missing values?
 
@@ -157,12 +188,14 @@ These descriptions of the Key Features come from the Kaggle source (Elgiriyewith
 10/31/2024 <br>
 0.1: Began to document the initial analysis and created a Formal Notebook and a Test Notebook <br>
 0.1.1: Added code and images relating to the "Before the Analysis" section in the README file <br>
-11/1 ~ 11/2 were spent visiting deceased loved ones <br>
+11/1 ~ 11/2 were spent visiting family and the cemetery <br>
 11/3/2024 <br>
-0.1.2: Further continued the documentation, started the summary of statistics, made some edits, and added more to the Formal Notebook
+0.2.1: Further continued the documentation (description and formatting), started the summary of statistics, made some edits, and added more to the Formal Notebook <br>
+11/4/2024 <br>
+0.2.2: Continued the documentation (Summary of Statistics: Overview of Dataset - ) with adding more to the Formal Notebook
 
 <br>
 
 ## Sources:
 Elgiriyewithana, N. (2023). *Most Streamed Spotify Songs 2023* [Data set]. Kaggle. [https://doi.org/10.34740/kaggle/dsv/6367938](https://doi.org/10.34740/kaggle/dsv/6367938) <br>
-Special thanks to the following sources: [StackOverflow](https://stackoverflow.com), Laurent Pointal for the [Python Cheat Sheet](https://perso.limsi.fr/pointal/python:memento)
+Special thanks to the following sources: [StackOverflow](https://stackoverflow.com), [GeeksforGeeks](https://www.geeksforgeeks.org), Laurent Pointal for the [Python Cheat Sheet](https://perso.limsi.fr/pointal/python:memento)
