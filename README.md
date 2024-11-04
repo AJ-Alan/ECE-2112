@@ -100,10 +100,31 @@ Most of the columns have data in them, and only these two columns have a number 
 <br>
 
 **Basic Descriptive Statistics** <br>
-The number of streams is very important to understanding how popular a song is, as such, to get a general idea of how the streams work, some basic summary statistics such as the mean, median, and standard deviation.
+The number of streams is very important to understanding how popular a song is, as such, to get a general idea of how the streams work, some basic summary statistics such as the mean, median, and standard deviation. <br>
+However, there was some cleaning to do, since when trying to change the 'streams' column's datatype to integer using this code: ```dataSpotify['streams'] = dataSpotify['streams'].astype(int)``` and it resulted to this error, <br>
+> ValueError: invalid literal for int() with base 10: 'BPM110KeyAModeMajorDanceability53Valence75Energy69Acousticness7Instrumentalness0Liveness17Speechiness3'
 
+This means that there is unwanted data here. Before removing it outright, checking the .csv file with a text editor shows that this string used to be a number, that being 1115880852 streams. There must have been an issue with the encoding, which led to this error. This unwanted data must also be the reason why the ```.describe()``` function couldn't describe this data. To change the data in the dataframe, the ```.replace(x,y)``` function should be used. Where x is the old value as the unwanted data and the y is the new value of 1115880852. <br>
+```Python
+dataSpotify['streams'] = dataSpotify['streams'].replace(['BPM110KeyAModeMajorDanceability53Valence75Energy69Acousticness7Instrumentalness0Liveness17Speechiness3'],1115880852)
+```
+Then the original function to change the datatype can be used: <br>
+```Python
+dataSpotify['streams'] = dataSpotify['streams'].astype(int) #changes the entire column into the integer datatype
+```
+Then using the ```.mean()```, ```.median()```, and ```.std()``` functions to find their respective statistics:
+```Python
+print('Statistics for the \'streams\' column:')
+print('mean: ',dataSpotify['streams'].mean()) #prints the mean of the column using the .mean() function
+print('median: ',dataSpotify['streams'].median()) #prints the median of the column using the .median() function
+print('standard deviation: ',dataSpotify['streams'].std()) #prints the standard deviation of the column using the .std() function
+```
+Results: <br>
+Statistics for the 'streams' column: <br>
+mean:  514768845.11437565 <br>
+median:  290833204.0 <br>
+standard deviation:  566894368.8747514 <br>
 
->What are the mean, median, and standard deviation of the streams column?
 >What is the distribution of released_year and artist_count? Are there any noticeable trends or outliers?
 
 **Top Performers** <br>
@@ -156,7 +177,7 @@ The number of streams is very important to understanding how popular a song is, 
 
 ## Sources:
 Elgiriyewithana, N. (2023). *Most Streamed Spotify Songs 2023* [Data set]. Kaggle. [https://doi.org/10.34740/kaggle/dsv/6367938](https://doi.org/10.34740/kaggle/dsv/6367938) <br>
-Special thanks to the following sources: [StackOverflow](https://stackoverflow.com), [GeeksforGeeks](https://www.geeksforgeeks.org), [W3Schools](https://www.w3schools.com), Laurent Pointal for the [Python Cheat Sheet](https://perso.limsi.fr/pointal/python:memento) <br>
+Special thanks to the following sources: [StackOverflow](https://stackoverflow.com), [GeeksforGeeks](https://www.geeksforgeeks.org), [W3Schools](https://www.w3schools.com), [Data to Fish](https://datatofish.com), Laurent Pointal for the [Python Cheat Sheet](https://perso.limsi.fr/pointal/python:memento) <br>
 
 <br>
 
