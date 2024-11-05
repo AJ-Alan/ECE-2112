@@ -171,13 +171,19 @@ standard deviation:  566894368.8747514 <br>
 11/3/2024 <br>
 0.2.1: Further continued the documentation (description and formatting), started the summary of statistics, made some edits, and added more to the Formal Notebook <br>
 11/4/2024 <br>
-0.2.2: Continued the documentation (Summary of Statistics: Overview of Dataset - ) with adding more to the Formal Notebook
+0.2.2: Continued the documentation (Summary of Statistics: Overview of Dataset - Basic Descriptive Statistics) with adding more to the Formal Notebook <br>
+11/5/2024 <br>
+0.2.3: Continued the documentation (Summary of Statistics: Basic Descriptive Statistics - ) with adding more to the Formal Notebook <br>
 
 <br>
 
 ## Sources:
 Elgiriyewithana, N. (2023). *Most Streamed Spotify Songs 2023* [Data set]. Kaggle. [https://doi.org/10.34740/kaggle/dsv/6367938](https://doi.org/10.34740/kaggle/dsv/6367938) <br>
 Special thanks to the following sources: [StackOverflow](https://stackoverflow.com), [GeeksforGeeks](https://www.geeksforgeeks.org), [W3Schools](https://www.w3schools.com), [Data to Fish](https://datatofish.com), Laurent Pointal for the [Python Cheat Sheet](https://perso.limsi.fr/pointal/python:memento) <br>
+
+<br>
+
+No AI tools were used in the making of this project.
 
 <br>
 
