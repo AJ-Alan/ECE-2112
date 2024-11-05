@@ -132,9 +132,38 @@ This shows that people stream a lot of songs on Spotify, especially with its (in
 <br>
 
 The next part is to analyze the distribution of the released_year and artist_count to the number of songs on the dataframe. <br>
-Using the seaborn function ```sns.displot(data)```, one can display distribution plots of a certain data. If the input 
+Using the seaborn function ```sns.displot(data)```, one can display distribution plots of a certain data. For the input, it is the columns 'released_year' and 'artist_count', and their distribution is based on the number of songs as seen here:
+```Python
+years = sns.displot(dataSpotify['released_year'], color='blue') 
+```
+Output: <br>
+![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/released_year.png)
 
->What is the distribution of released_year and artist_count? Are there any noticeable trends or outliers?
+<br>
+
+There are many songs throughout the years that have been listened to, where most streamed songs are from recent years as these are the popular songs that are trending due to social media. However, this large amount of streams are probably due to the inflation of streaming .... (insert source and discussion). <br>
+
+![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/oldest.png)
+
+The only few outliers are in the earlier years where these songs are mostly Christmas songs and the oldest song, 'Agudo Mï¿½ï¿½gi', is unrecognizable. This makes sense because Christmas songs are timeless and most people would play these songs during the season. <br>
+
+<br>
+
+```Python
+artist = sns.displot(dataSpotify['artist_count'], color='blue')
+```
+Output: <br>
+![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/artist_count.png)
+
+<br>
+
+Most songs are produced with one artist, mainly because most of them are bands or solo artist with a label. Rarely do they ever do collaborations, especially with many artist. The outliers are 8 and 7 featured artists. 
+
+![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/featured.png)
+
+Most of these are from different countries and they are smaller artists making collaborations so that they can be seen. One of them is from the movie Encanto, where the characters are listed as different artists and they are a lot of characters who sang this song. 
+
+<br>
 
 **Top Performers** <br>
 Everyone wants to know what are the most popular songs and it's usually based on the number of streams. To display this, dataSpotify needs to be spliced and reordered for the top 5 most streamed songs. It is preferable to set this to another variable, for this case, it's named 'topSpotify', so that the index can be reset to 1 to 5. The code below is used to do this:
@@ -145,8 +174,11 @@ topSpotify = topSpotify[:5] #splicing the dataframe to only the top 5
 topSpotify = topSpotify.set_index([[1,2,3,4,5]]) #resets the indices to show as the top 5
 print(topSpotify) #displays the top 5
 ```
-Output:
+Output: <br>
 ![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/topSpotify.png)
+
+<br>
+
 It shows that 'Blinding Lights' by 'The Weeknd' is the most popular song during 2023 with a stream count of 3,703,895,074 streams. <br>
 
 >Who are the top 5 most frequent artists based on the number of tracks in the dataset?
@@ -202,8 +234,6 @@ It shows that 'Blinding Lights' by 'The Weeknd' is the most popular song during 
 0.2.2: Continued the documentation (Summary of Statistics: Overview of Dataset - Basic Descriptive Statistics) with adding more to the Formal Notebook <br>
 11/5/2024 <br>
 0.2.3: Continued the documentation (Summary of Statistics: Basic Descriptive Statistics - Temporal Trends) with adding more to the Formal Notebook <br>
-
-[Return to Table of Contents](#Table-of-Contents)
 
 <br>
 
