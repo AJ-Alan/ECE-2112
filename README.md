@@ -234,6 +234,8 @@ It shows that 'Blinding Lights' by 'The Weeknd' is the most popular song during 
 0.2.2: Continued the documentation (Summary of Statistics: Overview of Dataset - Basic Descriptive Statistics) with adding more to the Formal Notebook <br>
 11/5/2024 <br>
 0.2.3: Continued the documentation (Summary of Statistics: Basic Descriptive Statistics - Temporal Trends) with adding more to the Formal Notebook <br>
+11/6/2024 <br>
+0.2.4: Began to focus on the coding but will continue the documentation (Summary of Statistics: Temporal Trends - Advanced Analysis)
 
 <br>
 
