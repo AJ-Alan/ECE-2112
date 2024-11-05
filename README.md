@@ -1,12 +1,13 @@
 # An Explorative Data Analysis on Spotify's Dataset from 2023 
 By Arc Joseph C. Villarmil, 2ECE-D <br>
 
-**Table of Contents**: <br>
+## Table of Contents:
 1. [Before the Analysis](#Before-the-Analysis) <br>
 2. [Summary of Statistics](#Summary-of-Statistics) <br>
 3. [Data Analysis](#Data-Analysis) <br>
 4. [Version History](#Version-History) <br>
 5. [Sources](#Sources) <br>
+(Click these to navigate through the file)
 
 ** **
 
@@ -55,6 +56,7 @@ As such, the following sections will be for this purpose. <br>
 * **[Data Analysis](#Data-Analysis)** will analyze the results of the statistics and provide relevant recommendations.
 * **[Version History](#Version-History)** will provide a version history for this Data Analysis
 * **[Sources](#Sources)** will provide the sources that were used for this Data Analysis
+* **[Table of Contents](#Table-of-Contents)** will return you to the table of contents
 
 <br>
 
@@ -104,9 +106,9 @@ The number of streams is very important to understanding how popular a song is, 
 However, there was some cleaning to do, since when trying to change the 'streams' column's datatype to integer using this code: ```dataSpotify['streams'] = dataSpotify['streams'].astype(int)``` and it resulted to this error, <br>
 > ValueError: invalid literal for int() with base 10: 'BPM110KeyAModeMajorDanceability53Valence75Energy69Acousticness7Instrumentalness0Liveness17Speechiness3'
 
-This means that there is unwanted data here. Before removing it outright, checking the .csv file with a text editor shows that this string used to be a number, that being 1115880852 streams. There must have been an issue with the encoding, which led to this error. This unwanted data must also be the reason why the ```.describe()``` function couldn't describe this data. To change the data in the dataframe, the ```.replace(x,y)``` function should be used. Where x is the old value as the unwanted data and the y is the new value of 1115880852. <br>
+This means that there is unwanted data here. There must have been an issue when the creator of this file obtained the data. This unwanted data must also be the reason why the ```.describe()``` function couldn't describe this data. To change the data in the dataframe, the ```.replace(x,y)``` function should be used. Where x is the old value as the unwanted data and the y is the new value of 0 because the new data could not be found. <br>
 ```Python
-dataSpotify['streams'] = dataSpotify['streams'].replace(['BPM110KeyAModeMajorDanceability53Valence75Energy69Acousticness7Instrumentalness0Liveness17Speechiness3'],1115880852)
+dataSpotify['streams'] = dataSpotify['streams'].replace(['BPM110KeyAModeMajorDanceability53Valence75Energy69Acousticness7Instrumentalness0Liveness17Speechiness3'],0)
 ```
 Then the original function to change the datatype can be used: <br>
 ```Python
@@ -121,14 +123,32 @@ print('standard deviation: ',dataSpotify['streams'].std()) #prints the standard 
 ```
 Results: <br>
 Statistics for the 'streams' column: <br>
-mean:  514768845.11437565 <br>
-median:  290833204.0 <br>
-standard deviation:  566894368.8747514 <br>
+mean:  513597931.3137461 <br>
+median:  290228626.0 <br>
+standard deviation:  566803887.0588316 <br>
+<br>
+
+This shows that people stream a lot of songs on Spotify, especially with its (insert amount of users with source) who use this app. <br>
+<br>
+
+The next part is to analyze the distribution of the released_year and artist_count to the number of songs on the dataframe. <br>
+Using the seaborn function ```sns.displot(data)```, one can display distribution plots of a certain data. If the input 
 
 >What is the distribution of released_year and artist_count? Are there any noticeable trends or outliers?
 
 **Top Performers** <br>
->Which track has the highest number of streams? Display the top 5 most streamed tracks.
+Everyone wants to know what are the most popular songs and it's usually based on the number of streams. To display this, dataSpotify needs to be spliced and reordered for the top 5 most streamed songs. It is preferable to set this to another variable, for this case, it's named 'topSpotify', so that the index can be reset to 1 to 5. The code below is used to do this:
+```Python
+topSpotify = dataSpotify[['track_name','streams']] #splicing dataSpotify for only track_name and streams
+topSpotify = topSpotify.sort_values(by=['streams'],ascending=False) #sorting all the streaming values in descending order
+topSpotify = topSpotify[:5] #splicing the dataframe to only the top 5
+topSpotify = topSpotify.set_index([[1,2,3,4,5]]) #resets the indices to show as the top 5
+print(topSpotify) #displays the top 5
+```
+Output:
+![](https://github.com/AJ-Alan/ECE-2112/blob/An-Explorative-Data-Analysis-on-Spotify's-Dataset-from-2023/topSpotify.png)
+It shows that 'Blinding Lights' by 'The Weeknd' is the most popular song during 2023 with a stream count of 3,703,895,074 streams. <br>
+
 >Who are the top 5 most frequent artists based on the number of tracks in the dataset?
 
 **Temporal Trends** <br>
@@ -141,6 +161,10 @@ standard deviation:  566894368.8747514 <br>
 
 **Platform Popularity** <br>
 >How do the numbers of tracks in spotify_playlists, spotify_charts, and apple_playlists compare? Which platform seems to favor the most popular tracks?
+
+<br>
+
+[Return to Table of Contents](#Table-of-Contents)
 
 <br>
 
@@ -159,6 +183,10 @@ standard deviation:  566894368.8747514 <br>
 
 <br>
 
+[Return to Table of Contents](#Table-of-Contents)
+
+<br>
+
 ## Version History
 10/30/2024 <br>
 0.0: Initial Creation <br>
@@ -173,7 +201,9 @@ standard deviation:  566894368.8747514 <br>
 11/4/2024 <br>
 0.2.2: Continued the documentation (Summary of Statistics: Overview of Dataset - Basic Descriptive Statistics) with adding more to the Formal Notebook <br>
 11/5/2024 <br>
-0.2.3: Continued the documentation (Summary of Statistics: Basic Descriptive Statistics - ) with adding more to the Formal Notebook <br>
+0.2.3: Continued the documentation (Summary of Statistics: Basic Descriptive Statistics - Temporal Trends) with adding more to the Formal Notebook <br>
+
+[Return to Table of Contents](#Table-of-Contents)
 
 <br>
 
